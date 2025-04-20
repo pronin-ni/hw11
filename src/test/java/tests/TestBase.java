@@ -35,6 +35,10 @@ public class TestBase {
     @BeforeEach
     void beforeEach(){
         SelenideLogger.addListener("allure", new AllureSelenide());
+        System.out.println("Browser: " + Configuration.browser);
+        System.out.println("Version: " + Configuration.browserVersion);
+        System.out.println("Size: " + Configuration.browserSize);
+        System.out.println("Selenoid: " + Configuration.remote);
     }
 
 
