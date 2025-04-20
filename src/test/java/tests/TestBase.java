@@ -17,9 +17,10 @@ public class TestBase {
     @BeforeAll
     static void beforeAll(){
         Configuration.browser = System.getProperty("browser", "chrome");
+
         Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.remote = "https://user1:1234@"+System.getProperty("selenoid_url");
+        Configuration.remote = "https://user1:1234@"+System.getProperty("selenoidUrl")s+"/wd/hub/";
     }
 
     @AfterEach
