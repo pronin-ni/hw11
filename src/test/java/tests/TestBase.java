@@ -20,7 +20,7 @@ public class TestBase {
 
         Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.remote = "https://user1:1234@"+System.getProperty("selenoidUrl")s+"/wd/hub/";
+        Configuration.remote = "https://user1:1234@"+System.getProperty("selenoidUrl")+"/wd/hub/";
     }
 
     @AfterEach
