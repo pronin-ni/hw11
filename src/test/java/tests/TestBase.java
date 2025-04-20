@@ -16,12 +16,10 @@ public class TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
     @BeforeAll
     static void beforeAll(){
-        String selenoidUrl = System.getProperty("selenoidUrl");
         Configuration.browser = System.getProperty("browser", "chrome");
-
         Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.remote = "https://user1:1234@"+selenoidUrl+"/wd/hub/";
+        Configuration.remote = "https://user1:1234@"+System.getProperty("selenoid_url");
     }
 
     @AfterEach
